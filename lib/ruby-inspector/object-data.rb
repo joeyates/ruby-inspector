@@ -1,7 +1,7 @@
 class ObjectData
   attr_reader :object, :public_instance_methods, :public_methods, :private_methods, :constants, :included_modules, :singleton_methods
 
-  def self.build_array(a)
+  def self.load_objects(a)
     a.sort!{|k1, k2| k1.name <=> k2.name}
     a.inject({}) do |memo, o|
       memo[o.name] = ObjectData.new(o)
