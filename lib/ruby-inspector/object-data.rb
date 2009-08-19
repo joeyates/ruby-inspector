@@ -1,5 +1,5 @@
 class ObjectData
-  attr_reader :object, :public_instance_methods, :public_methods, :private_methods, :constants, :included_modules, :singleton_methods
+  attr_reader :object, :public_instance_methods, :public_methods, :private_methods, :constants, :included_modules
 
   def self.load_objects(a)
     a.sort!{|k1, k2| k1.name <=> k2.name}
@@ -17,7 +17,6 @@ class ObjectData
     @constants               = ObjectData.base_methods(o, 'constants').sort
     if o.class == Class
       @included_modules      = ObjectData.base_methods(o, 'included_modules').collect{ |c| c.name } 
-      @singleton_methods     = o.singleton_methods(false).sort
     end
   end
 

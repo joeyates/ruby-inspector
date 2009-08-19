@@ -70,10 +70,6 @@ bClassMethod = obj.class == Class ? true : false
 <%= string_array_to_ul(RDocReader.find_all(obj, false, obd.public_instance_methods)) %>
 <h3>private_methods</h3>
 <%= string_array_to_ul(obd.private_methods) %>
-<% if obj.class == Class %>
-<h3>singleton_methods</h3>
-<%= string_array_to_ul(RDocReader.find_all(obj, false, obd.singleton_methods)) %>
-<% end %>
 EOT
     def classes
       mount_proc('/classes') do |req, rsp|
