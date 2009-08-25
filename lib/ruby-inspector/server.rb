@@ -43,7 +43,7 @@ ObjectsTemplate = <<EOT
 #{ IndexTemplate }
 <%
 klass = sType == 'classes' ? Class : Module
-aObjects = $hObjects.select {|k, v| v.object.class == klass }.map{|k, v| k }
+aObjects = @hObjects.select {|k, v| v.object.class == klass }.map{|k, v| k }
 %>
 <%= object_links(sType, aObjects) %>
 EOT

@@ -10,3 +10,5 @@ require_relative '../lib/ruby-inspector/server'
 srv = RubyInspector::Server.new(hObjects)
 trap('INT') { srv.shutdown }
 srv.start
+
+# Kernel.global_variables
