@@ -1,0 +1,10 @@
+ruby-inspector
+==============
+
+This project implements a web server that provides documentation about Ruby's base classes and modules.
+
+Ruby version
+============
+Works only with Ruby 1.9
+
+Copyright (c) 2009 Joe Yates, released under the MIT license
